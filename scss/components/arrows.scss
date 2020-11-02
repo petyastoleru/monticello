@@ -1,0 +1,35 @@
+.arrow {
+  width: 40px;
+  height: 40px;
+  border: 1px solid $color__main--white;
+  border-radius: 50%;
+  @include flexCenter;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    display: block;
+    border-left: 1px solid $color__main--white;
+    border-bottom: 1px solid $color__main--white;
+  }
+
+  &--left {
+    &::before {
+      transform: rotate(45deg);
+    }
+  }
+
+  &--right {
+    &::before {
+      transform: rotate(225deg);
+    }
+  }
+
+  &--down {
+    &::before {
+      transform: rotate(-45deg);
+    }
+  }
+}

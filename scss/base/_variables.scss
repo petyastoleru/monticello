@@ -1,0 +1,13 @@
+@import "./reset";
+@import "./responsive";
+@import "./mixins";
+
+$font__gotham: "Gotham", sans-serif;
+$font__gotham-book: "gothambook", sans-serif;
+$font__open-sans: "Open Sans", sans-serif;
+
+$color__main--white: #ffffff;
+$color__main--blue: #2c4058;
+$color__main--dark-grey: #4b5562;
+$color__gradient_from: #55b7ff;
+$color__gradient_to: #7e5aff;

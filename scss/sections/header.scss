@@ -1,0 +1,214 @@
+.header {
+  height: 100vh;
+  position: relative;
+
+  &__wrapper {
+    height: auto;
+    z-index: 1;
+  }
+
+  &__nav {
+    width: 100%;
+    margin: 0 auto;
+    @include flexAlignCenter(space-between);
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-size: 14px;
+    z-index: 999;
+    justify-content: space-around;
+    height: 60px;
+
+    @include tablet {
+      height: 70px;
+    }
+
+    @include laptop {
+      justify-content: center;
+      height: 120px;
+      align-items: flex-end;
+      padding-bottom: 20px;
+    }
+
+    @include desktop {
+      justify-content: center;
+      height: 120px;
+      align-items: flex-end;
+      padding-bottom: 20px;
+    }
+  }
+
+  &__list {
+    display: none;
+    flex-direction: column;
+    text-transform: uppercase;
+    width: 100%;
+    position: absolute;
+    top: 58px;
+    align-items: center;
+
+    @include laptop {
+      width: auto;
+      @include flexRowJustLeft;
+      position: static;
+      margin: 0 60px 0 40px;
+      padding-bottom: 15px;
+    }
+
+    @include desktop {
+      position: static;
+      width: auto;
+      @include flexRowJustLeft;
+      margin: 0 100px 0 80px;
+      padding-bottom: 15px;
+    }
+  }
+
+  &__burger {
+    display: flex;
+
+    @include laptop {
+      display: none;
+    }
+
+    @include desktop {
+      display: none;
+    }
+  }
+
+  &__social {
+    display: none;
+
+    @include tablet {
+      display: block;
+    }
+
+    @include laptop {
+      display: block;
+    }
+
+    @include desktop {
+      display: block;
+    }
+  }
+
+  &__item {
+    margin-left: 7vw;
+    cursor: pointer;
+    position: relative;
+    width: 100vw;
+    height: 40px;
+    @include flexAlignCenter(center);
+    opacity: 0.7;
+
+    &:hover {
+      &::before {
+        background-color: rgb(230, 230, 230);
+      }
+    }
+
+    & > * {
+      color: $color__main--white;
+      width: 100%;
+      height: 100%;
+      @include flexCenter;
+
+      &:hover {
+        color: rgb(230, 230, 230);
+      }
+    }
+
+    @include tablet {
+      width: 80px;
+    }
+
+    @include laptop {
+      margin-left: 5vw;
+      @include autoWidthHeight;
+      display: block;
+      margin-right: 0;
+      opacity: 1;
+    }
+
+    @include desktop {
+      margin-left: 46px;
+      margin-right: 46px;
+      @include autoWidthHeight;
+      display: block;
+      opacity: 1;
+    }
+
+    &::before {
+      content: "";
+      width: 9px;
+      height: 9px;
+      display: block;
+      border: 1px solid $color__main--white;
+      border-radius: 50%;
+      @include absoluteTopCenter;
+      left: 20px;
+
+      @include tablet {
+        left: -50px;
+      }
+
+      @include laptop {
+        left: -28px;
+      }
+
+      @include desktop {
+        left: -28px;
+      }
+    }
+
+    &--active {
+      opacity: 1;
+
+      &::before {
+        background-color: $color__main--white;
+      }
+    }
+  }
+
+  &__slider {
+    width: 100%;
+    margin-bottom: 0 !important;
+  }
+
+  .slick-slide {
+    height: 100vh;
+  }
+
+  &__icon {
+    @include aboluteCenterLeft;
+    bottom: 100px;
+    font-size: 30px;
+    color: $color__main--white;
+    cursor: pointer;
+
+    &:hover {
+      &::before {
+        transition: 2s ease-in-out;
+        transform: rotate(675deg);
+      }
+    }
+  }
+}
+
+.logo {
+  &__image {
+    width: 150px;
+
+    @include tablet {
+      width: 200px;
+    }
+
+    @include laptop {
+      width: 241px;
+    }
+
+    @include desktop {
+      width: 241px;
+    }
+  }
+}
