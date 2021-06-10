@@ -1,0 +1,14 @@
+.main-wrapper {
+  width: 100%;
+  font-family: $font__gotham;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+
+  @include desktop {
+    max-width: 1600px;
+  }
+}

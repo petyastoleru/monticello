@@ -1,0 +1,111 @@
+.card {
+  width: 90vw;
+  height: 514px;
+  background-color: $color__main--white;
+  color: $color__main--blue;
+  cursor: pointer;
+  position: relative;
+
+  @include tablet {
+    width: 370px;
+  }
+
+  @include laptop {
+    width: 370px;
+  }
+
+  @include desktop {
+    width: 370px;
+  }
+  &:hover &__add {
+    display: block;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  &__add {
+    display: none;
+    width: 80px;
+    height: 80px;
+    border: 1px solid $color__main--white;
+    border-radius: 50%;
+    @include aboluteCenterLeft;
+    top: 80px;
+
+    &::before {
+      content: "";
+      width: 2px;
+      height: 28px;
+      @include aboluteCenter;
+      background-color: $color__main--white;
+    }
+
+    &::after {
+      content: "";
+      width: 28px;
+      height: 2px;
+      @include aboluteCenter;
+      background-color: $color__main--white;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+
+    & > * {
+      width: 100%;
+    }
+  }
+
+  &__description {
+    max-width: 320px;
+    margin-left: 21px;
+    margin-top: 23px;
+    margin-right: 21px;
+  }
+
+  &__title {
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.5;
+  }
+
+  &__paragraph {
+    margin-top: 6px;
+    color: $color__main--dark-grey;
+    font-size: 18px;
+    font-family: font__open-sans;
+    line-height: 1.6;
+    letter-spacing: 1px;
+  }
+
+  &__profile {
+    margin-top: 30px;
+    @include flexRowJustLeft;
+    @include mobile {
+      position: absolute;
+      bottom: 0;
+    }
+  }
+
+  &__profile-info {
+    margin-left: 20px;
+    margin-top: 11px;
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    font-family: $font__gotham-book;
+    text-transform: uppercase;
+  }
+
+  &__date {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #55b7ff;
+    margin-bottom: 30px;
+  }
+}

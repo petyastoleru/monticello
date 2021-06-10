@@ -1,0 +1,32 @@
+.btn {
+  width: 90vw;
+  height: 50px;
+  border: 1px solid $color__main--blue;
+  font-family: $font__gotham-book;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: $color__main--blue;
+  @include flexCenter;
+
+  &:hover {
+    background: linear-gradient(
+      to right,
+      $color__gradient_from,
+      $color__gradient_to
+    );
+    color: $color__main--white;
+  }
+
+  @include tablet {
+    width: 40vw;
+    margin: 0 auto;
+  }
+
+  @include laptop {
+    width: 190px;
+  }
+
+  @include desktop {
+    width: 190px;
+  }
+}

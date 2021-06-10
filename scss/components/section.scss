@@ -1,0 +1,80 @@
+.section {
+  width: 100%;
+  position: relative;
+  &::before {
+    content: "";
+    width: 100px;
+    height: 1px;
+    display: block;
+    top: 40px;
+    @include aboluteCenterLeft;
+
+    @include tablet {
+      top: 60px;
+    }
+
+    @include laptop {
+      top: 100px;
+    }
+
+    @include desktop {
+      top: 100px;
+    }
+  }
+
+  &--large {
+    &::before {
+      @include desktop {
+        top: 140px;
+      }
+    }
+  }
+
+  &--blue {
+    &::before {
+      background-color: $color__main--blue;
+    }
+    color: $color__main--blue;
+  }
+
+  &--white {
+    &::before {
+      background-color: $color__main--white;
+    }
+    color: $color__main--white;
+  }
+
+  &__title {
+    font-size: 35px;
+    width: 95vw;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    @include aboluteCenterLeft;
+    top: 70px;
+    letter-spacing: 3px;
+
+    @include tablet {
+      top: 90px;
+      font-size: 38px;
+    }
+
+    @include laptop {
+      font-size: 44px;
+      top: 140px;
+      width: auto;
+    }
+
+    @include desktop {
+      font-size: 44px;
+      top: 135px;
+      width: auto;
+    }
+
+    &--large {
+      @include desktop {
+        top: 175px;
+      }
+    }
+  }
+}
